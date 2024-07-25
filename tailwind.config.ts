@@ -19,6 +19,7 @@ const config: Config = {
           tab: "#CCC",
           "tab-active": "#F6E258",
           secondary: "#FCAAE5",
+          "filter-active": "#CCCCCC",
         },
         border: {
           DEFAULT: "#000",

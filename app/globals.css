@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Work Sans", system-ui, sans-serif;
+  }
+}
+
+.active-filter {
+  border: 1px solid black;
+  @apply bg-background-filter-active
+}
 
 .carousel {
   @apply inline-flex overflow-x-scroll;

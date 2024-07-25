@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { MainNav } from '@/components/navigation/MainNav'
+import { MARKETING } from '@/config/marketing'
+import Link from 'next/link'
+import { Footer } from '@/components/Footer'
+import { cn } from '@/lib/utils'
+import { buttonVariants } from "@/components/Button";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +23,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <div className="flex min-h-screen flex-col">
+          <header className="container z-40 bg-background">
+            <div className="flex h-32 items-center justify-between py-6">
+              <MainNav items={MARKETING.Navigation} />
+              <nav>
+                <Link
+                  href="/register"
+                  className={cn(
+                    buttonVariants(),
+                    "border-solid border-2 border-border"
+                  )}
+                >
+                  Register Now
+                </Link>
+              </nav>
+            </div>
+          </header>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
-  )
+  );
 }

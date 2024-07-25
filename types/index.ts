@@ -43,3 +43,9 @@ export interface FooterData {
   FollowUs: FooterItem[];
   Sponsors: FooterItem[];
 }
+
+
+
+export  interface FilterInfo {
+  [key: string]: string[];
+}
