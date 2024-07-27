@@ -3,11 +3,12 @@ import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline flex items-center rounded-md text-sm font-medium",
+  "flex items-center rounded-md text-sm font-medium", 
   {
     variants: {
       variant: {
-        default: "bg-background-button text-text",
+        default: "bg-indigo-300 hover:bg-indigo-600 hover:text-white",
+        secondary: "bg-background-gray-light",  
       },
       size: {
         default: "h-10 py-2 px-4",

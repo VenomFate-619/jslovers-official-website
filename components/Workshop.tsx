@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./Button";
 import { cn } from "@/lib/utils";
@@ -18,20 +19,19 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
     workshopDescription,
     workshopDate,
   } = workshopData;
-
   return (
     <div className={cn(className)}>
       <div className="flex justify-center lg:justify-start items-center group flex-wrap">
         <Image
           src={speakerImageSrc}
-          alt="hero_image"
+          alt=""
           className="mb-4 lg:mb-0"
         />
         <div className="sm:ml-5 text-center sm:text-left space-y-1.5">
           <h2 className="text-xl  lg:text-2xl xl:text-3xl font-medium text-text-sub-heading-2">
             Upcoming Workshop by
           </h2>
-          <p className="text-lg lg:text-xl font-semibold">{speakerName}</p>
+          <Link href="#" className="text-lg lg:text-xl font-semibold">{speakerName}</Link>
           <p className="text-sm lg:text-base font-semibold text-text-muted">
             {speakerRole}
           </p>
@@ -43,7 +43,7 @@ const Workshop = ({ workshopData, className }: WorkshopProps) => {
       <p className="relative mt-2 text-center lg:text-left text-base lg:text-lg text-text-paragraph sm:max-w-full lg:max-w-none">
         {workshopDescription}
       </p>
-      <p className="mt-3 font-semibold text-text-accent text-center lg:text-left text-sm lg:text-xl">
+      <p className="mt-3 font-semibold text-text-accent text-center lg:text-left text-sm lg:text-xl text-blue-700">
         {workshopDate}
       </p>
 
