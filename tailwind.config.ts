@@ -56,6 +56,7 @@ const config = {
         lavenderRose: "hsl(var(--lavenderRose))",
         cyanCobaltBlue: "hsl(var(--cyanCobaltBlue))",
         spanishGray: "hsl(var(--spanishGray))",
+        filterActive: "#CCCCCC",
       },
       borderRadius: {
         lg: "var(--radius)",

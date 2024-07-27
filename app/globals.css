@@ -92,6 +92,13 @@
   }
 }
 
+@layer utilities {
+  .active-filter {
+    border: 1px solid black;
+    @apply bg-filterActive
+  }
+}
+
 @font-face {
   font-family: 'TruenoBlackOutline';
   src: url('../public/fonts/TruenoBlackOutline.woff2') format('woff2');
@@ -99,9 +106,4 @@
 
 .page-heading {
   font-family: 'TruenoBlackOutline', sans-serif;
-}
-
-.active-filter {
-  border: 1px solid black;
-  @apply bg-background-filter-active
 }

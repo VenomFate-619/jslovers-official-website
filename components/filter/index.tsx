@@ -67,7 +67,7 @@ export const Filters = ({ filter }: { filter: FilterInfo }) => {
               viewBox="0 0 28 15"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={"ml-[22px] transition-transform duration-[500ms] " + returnRotateClass(filterName)}
+              className={"ml-[22px] transition-transform duration-500" + returnRotateClass(filterName)}
             >
               <path
                 d="M2 1.5L14 13.5L26 1.5"
